@@ -102,6 +102,21 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.contador {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
 .hero {
     background: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.7)), url('../images/Fundo.png') center/cover;
     height: 100vh;
@@ -387,4 +402,44 @@ footer {
 #valorTotal {
     font-size: 22px;
     color: var(--destaque--preco);
+}
+
+/* Visuais para botão adicionar e remover */
+
+/* Estilo dos botões de quantidade (+ e -) */
+.qtd--controles {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn-qtd {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-qtd:hover {
+    background-color: var(--destaque--preco);
+    color: white;
+    border-color: var(--destaque--preco);
+}
+
+/* Estilo do botão X (agora para excluir a linha toda) */
+.btn-excluir-item {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 10px;
 }
